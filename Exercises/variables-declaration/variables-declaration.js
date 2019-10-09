@@ -1,20 +1,20 @@
 // 1. Declare a variable which will be encapsulated from global scope.
 {
-    let newVariable = 'piupiu';
-    console.log(newVariable)
+  let newVariable = 'piupiu';
+  console.log(newVariable);
 }
-console.log(newVariable)
+console.log(newVariable);
 
 // 2. Declare a variable which will appear in global object.
-globalMessage = "Hello";
+globalMessage = 'Hello';
 
 console.log(global.globalMessage);
 
 // 3. Declare two variables which will be same-names but contain different values
-let variable = 123
+let variable = 123;
 {
-    let variable = 555;
-    console.log(variable);
+  let variable = 555;
+  console.log(variable);
 }
 console.log(variable);
 
