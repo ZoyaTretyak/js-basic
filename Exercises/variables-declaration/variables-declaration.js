@@ -1,14 +1,14 @@
-// // 1. Declare a variable which will be encapsulated from global scope.
-// {
-//   let newVariable = 'piupiu';
-//   console.log(newVariable);
-// }
-// console.log(newVariable);
+// 1. Declare a variable which will be encapsulated from global scope.
+{
+  let newVariable = 'piupiu';
+  console.log(newVariable);
+}
+console.log(newVariable);
 
-// // 2. Declare a variable which will appear in global object.
-// globalMessage = 'Hello';
+// 2. Declare a variable which will appear in global object.
+globalMessage = 'Hello';
 
-// console.log(global.globalMessage);
+console.log(global.globalMessage);
 
 // 3. Declare two variables which will be same-names but contain different values
 const variable = 123;
@@ -21,8 +21,8 @@ console.log(variable);
 
 // Hoisting. Declare a variable with hosting.
 
-// hoistedVar = 'test';
+hoistedVar = 'test';
 
-// console.log(hoistedVar);
+console.log(hoistedVar);
 
-// var hoistedVar;
+var hoistedVar;
