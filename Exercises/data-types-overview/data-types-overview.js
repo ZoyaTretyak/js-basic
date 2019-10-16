@@ -2,19 +2,19 @@
 let numberVariable = 123;
 console.log(numberVariable);
 
-let numberConstructor = Number(123);
+let numberConstructor = new Number(123);
 console.log(numberConstructor);
 
 let stringVariable = 'String variable';
 console.log(stringVariable);
 
-let stringConstructor= String('value');
+let stringConstructor= new String('value');
 console.log(stringConstructor);
 
 let booleanVariable = 7 > 0;
 console.log(booleanVariable);
 
-let booleanConstructor = Boolean(' 7 > 0');
+let booleanConstructor = new Boolean(' 7 > 0');
 console.log(booleanConstructor);
 
 let nullVariable = null; 
@@ -23,7 +23,7 @@ console.log(nullVariable);
 let objectVariable = {}; 
 console.log(objectVariable);
 
-let objectConstructor = Object({}); 
+let objectConstructor = new Object({}); 
 console.log(objectConstructor);
 
 let arrayValue = []; 
@@ -62,3 +62,12 @@ console.log(gardenCopy);
 
 let myName = 'Zoya';
 console.log(`Hey! My name is ${myName}`);
+
+//# Additional
+
+//1. Declare an array containing different data types.
+
+let piu = [213, 'test', {}];
+
+console.log(piu);
+//2. Iterate through it and collect amount of each data type to object.
