@@ -64,10 +64,21 @@ let myName = 'Zoya';
 console.log(`Hey! My name is ${myName}`);
 
 //# Additional
-
 //1. Declare an array containing different data types.
-
-let piu = [213, 'test', {}];
+let piu = [213, 'test', 333, 675, {}, true];
 
 console.log(piu);
-//2. Iterate through it and collect amount of each data type to object.
+//2. Iterate through it and collect amount of each data type to object
+let objOutput = {};
+let i = 0;
+
+for (i ; i < piu.length ; i++) {
+  let key = typeof piu[i];
+  if (objOutput[key] !== undefined ) {
+    objOutput[key] += 1;
+  }
+  else {
+    objOutput[key] = 1;
+  }
+}
+console.log(objOutput);
