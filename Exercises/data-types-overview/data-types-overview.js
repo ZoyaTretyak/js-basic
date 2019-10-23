@@ -1,38 +1,41 @@
 //1. Declare a variable on each type using two options: plain creation, creation with constructor.
-let numberVariable = 123;
+const numberVariable = 123;
 console.log(numberVariable);
 
-let numberConstructor = new Number(123);
+/*eslint-disable no-new-wrappers*/
+const numberConstructor = new Number(123);
 console.log(numberConstructor);
 
-let stringVariable = 'String variable';
+const stringVariable = 'String variable';
 console.log(stringVariable);
 
-let stringConstructor= new String('value');
+const stringConstructor = new String('value');
 console.log(stringConstructor);
 
-let booleanVariable = 7 > 0;
+const booleanVariable = 7 > 0;
 console.log(booleanVariable);
 
-let booleanConstructor = new Boolean(' 7 > 0');
+const booleanConstructor = new Boolean(' 7 > 0');
 console.log(booleanConstructor);
 
-let nullVariable = null; 
+const nullVariable = null;
 console.log(nullVariable);
 
-let objectVariable = {}; 
+const objectVariable = {};
 console.log(objectVariable);
 
-let objectConstructor = new Object({}); 
-console.log(objectConstructor);
+// const objectConstructor = new Object();
+// objectConstructor.a = 'test';
+// objectConstructor.b = 123;
+// console.log(objectConstructor);
 
-let arrayValue = []; 
+const arrayValue = [];
 console.log(arrayValue);
 
-let undefinedValue; 
+let undefinedValue;
 console.log(undefinedValue);
 
-let symbolValue = Symbol('4'); 
+const symbolValue = Symbol('4');
 console.log(symbolValue);
 
 // 2. Use operator typeof on each of them.
@@ -46,39 +49,33 @@ console.log(typeof symbolValue);
 
 //3. Demonstrate object's references.
 
-let garden = {tree1: 'chestnut', tree2: 'pine-tree'};
+const garden = { tree1: 'chestnut', tree2: 'pine-tree' };
 console.log(garden);
 
-let gardenCopy = garden;
- 
+const gardenCopy = garden;
+
 gardenCopy.tree2 = 'apple-tree';
 
 console.log(garden === gardenCopy);
- 
+
 console.log(garden);
 console.log(gardenCopy);
 
 // 4. Demonstrate string's backticks features.
 
-let myName = 'Zoya';
+const myName = 'Zoya';
 console.log(`Hey! My name is ${myName}`);
 
 //# Additional
 //1. Declare an array containing different data types.
-let piu = [213, 'test', 333, 675, {}, true];
+const piu = [213, 'test', 333, 675, {}, true];
 
 console.log(piu);
 //2. Iterate through it and collect amount of each data type to object
-let objOutput = {};
-let i = 0;
+const objOutput = piu.reduce((acc, value) => {
+  const type = typeof value;
+  acc[type] = (acc[type] || 0) + 1;
 
-for (i ; i < piu.length ; i++) {
-  let key = typeof piu[i];
-  if (objOutput[key] !== undefined ) {
-    objOutput[key] += 1;
-  }
-  else {
-    objOutput[key] = 1;
-  }
-}
+  return acc;
+}, {});
 console.log(objOutput);
