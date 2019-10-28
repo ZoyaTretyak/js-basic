@@ -1,6 +1,7 @@
 // 1. Declare a variable which will be encapsulated from global scope.
+/*eslint-disable */
 {
-  let newVariable = 'piupiu';
+  const newVariable = 'piupiu';
   console.log(newVariable);
 }
 console.log(newVariable);
