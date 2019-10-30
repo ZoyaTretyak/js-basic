@@ -8,10 +8,10 @@ console.log(binaryNumber, octalNumber, hexadecimalNumber);
 // 2. Implement function `extractNumbers` which will leave only numbers in passed string.
 function extractNumbers(text) {
   const number = parseInt(text, 10);
-  if (isNaN(number) === true) {
+  if (isNaN(number)) {
     return console.log('Text should starts with numbers');
   }
-  return console.log(number);
+  return number;
 }
 // 3. Declare a variable with decimal value and convert to binary, octal and hexadecimal.
 const decimalNumber = 55;
