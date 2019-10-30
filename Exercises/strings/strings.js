@@ -19,13 +19,13 @@ console.log(variable);
 
 // 5. Declare a variable which contain name and surname of your favourite writer in lowercase. Log his/her name with capitals first letters.
 
-const firstName = 'neil';
-const lastName = 'gaiman';
+let firstName = 'neil';
+let lastName = 'gaiman';
 
-const firstLetter1 = firstName[0].toUpperCase();
-const firstLetter2 = lastName[0].toUpperCase();
+firstName = firstName[0].toUpperCase() + firstName.slice(1);
+lastName = lastName[0].toUpperCase() + lastName.slice(1);
 
-console.log(firstLetter1 + firstName.slice(1) +' '+ firstLetter2 + lastName.slice(1));
+console.log(`${firstName} ${lastName}`);
 
 // # Additional
 
@@ -34,7 +34,7 @@ console.log(firstLetter1 + firstName.slice(1) +' '+ firstLetter2 + lastName.slic
 //   - length no less than 8 characters.
 //   - should contain at leas one special character.
 
-function passvordValidation(pwd){
+function passvordValidation(pwd) {
   
   const regexp = /^[a-zA-Z0-9]*$/;
   if (pwd.toLowerCase() === pwd) {
@@ -46,17 +46,17 @@ function passvordValidation(pwd){
     console.log('Pasword should include at least 1 LowCase letter');
     return false;
   }
-      
-  if (regexp.test(pwd)) {
-    console.log('Pasword should be include at least 1 special character');
-    return false;
-  }
-      
+
   if (pwd.length < 8) {
     console.log('Pasword should be 8 or more characters');
     return false;
   }
       
+  if (regexp.test(pwd)) {
+    console.log('Pasword should be include at least 1 special character');
+    return false;
+  }
+          
   return true;
 }
   
