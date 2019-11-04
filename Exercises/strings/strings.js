@@ -35,31 +35,26 @@ console.log(`${firstName} ${lastName}`);
 //   - should contain at leas one special character.
 
 function passvordValidation(pwd) {
-  
   const regexp = /^[a-zA-Z0-9]*$/;
   if (pwd.toLowerCase() === pwd) {
     console.log('Pasword should include at least 1 UpperCase letter');
     return false;
   }
-      
   if (pwd.toUpperCase() === pwd) {
     console.log('Pasword should include at least 1 LowCase letter');
     return false;
   }
-
   if (pwd.length < 8) {
     console.log('Pasword should be 8 or more characters');
     return false;
   }
-      
   if (regexp.test(pwd)) {
     console.log('Pasword should be include at least 1 special character');
     return false;
   }
-          
   return true;
 }
-  
+
 console.log(passvordValidation('Pa$$Word'));
 
 
