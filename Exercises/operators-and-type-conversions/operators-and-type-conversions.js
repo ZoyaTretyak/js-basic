@@ -6,7 +6,9 @@ console.log(piu);
 // 2. You have following string: `Amazon annual revenue of US$232.887 billion` extract revenue and count monthly income.
 
 const string = 'Amazon annual revenue of US$232.887 billion';
-const monthlyIncome = Math.round(string.slice(28, 35) % 12);
+const i = string.indexOf('$');
+const revenue = string.slice(i + 1, i + 8);
+const monthlyIncome = Math.round(revenue / 12);
 
 console.log(monthlyIncome);
 
