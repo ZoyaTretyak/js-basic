@@ -1,11 +1,8 @@
 // # Arrays methods
 
 // 1. Create a function - predicate which will return `true` if passed element present in array and `false` - if not.
-const checkElement = (arr,element) => {
-  arr.includes(element);
-  return true;
-};
-console.log(checkElement([3, 4, 5], 1));
+const checkElement = (arr,element) => arr.includes(element);
+console.log(checkElement([3, 4, 5], 0));
 
 // 2. Create a function which will check that all array elements are even.
 const even = (arr) => arr.every(element => element % 2);
