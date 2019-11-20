@@ -15,7 +15,8 @@ console.log(checkIsArray([2,4,5]));
 
 // 4. Create a function which will take `array`, `indexToInsert`, `element` and will insert passed element to provided index in array.
 const insertElement = (arr, indexToInsert, element) => {
-  arr.splice(indexToInsert, 0, element);
-  return arr;
+  const arr1 = arr;
+  arr1.splice(indexToInsert, 0, element);
+  return arr1;
 };
 console.log(insertElement([1,3,5,7,9], 0, 4));
