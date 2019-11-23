@@ -16,19 +16,19 @@ console.log(funcObject(4,6));
 // 2. Get parameters amount of function `takeMyParametersAmount`.
 
 function takeMyParametersAmount(a, b, c) {
-  return takeMyParametersAmount.length;
+  return null;
 }
+
+console.log(takeMyParametersAmount.length)
 
 // 2. Create a function and log all passed parameters to it. Check the `length` of this function.
 
 function myNewFunc(...args) {
-  return console.log(args, args.length)
+  return console.log(args, args.length);
 }
 myNewFunc(4, 8, 'ewr', '76', 55);
 
 // 3. Using anonymous function encapsulate function body from global scope.
-const anonymousFunc = function () {
-  const myVar = 'piu';
-  return myVar;
-};
-console.log(anonymousFunc());
+(function () {
+  return console.log('Hey');
+})();
