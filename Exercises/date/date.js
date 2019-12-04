@@ -1,7 +1,6 @@
 /*eslint-disable */
 // 1. Make a function which will return passed date object to passed format. Supported formats:
 const date = new Date();
-console.log(date);
 function dateFormat (date, dateFormat) {
   let day = date.getDate();
   let month = date.getMonth() + 1;
