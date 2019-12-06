@@ -52,4 +52,4 @@ function timezone(date, timezone) {
   const setTimeZone = new Date(date).toLocaleString('en-US', { timeZone: timezone } );
   return setTimeZone;
 }
-console.log(timezone('2019/11/4', 'Europe/Kiev'));
+console.log(timezone(new Date(), 'Europe/Kiev'));
