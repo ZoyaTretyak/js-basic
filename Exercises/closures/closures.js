@@ -1,6 +1,7 @@
 const user = {
   name: 'Test',
   surname: 'Testing',
+  nickname: 'Piu piu'
 };
 
 function greetUser(user, getNameFunc) {
@@ -10,10 +11,13 @@ function greetUser(user, getNameFunc) {
 /**
  * @param field - name of property in object
  */
-const getGreetNameByField = (field) => {
-};
+const getGreetNameByField = (field) => (
+  function (user) {
+    return user[field];
+  }
+);
 
 //wrap in console log to check
-greetUser(user, getGreetNameByField('name')); // I am happy to see you Test
-greetUser(user, getGreetNameByField('surname')); // I am happy to see you Testing
-greetUser(user, getGreetNameByField('nickname')); //'
+console.log(greetUser(user, getGreetNameByField('name'))); // I am happy to see you Test
+console.log(greetUser(user, getGreetNameByField('surname'))); // I am happy to see you Testing
+console.log(greetUser(user, getGreetNameByField('nickname'))); //'
